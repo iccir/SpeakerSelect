@@ -17,7 +17,7 @@ SpeakerSelect is my replacement for the macOS Sound menu extra.
 ---
 ## License
 
-I only care about proper attributed in source code. While
+I only care about proper attribution in source code. While
 attribution in binary form is welcomed, it is not necessary.
 
 Hence, unless otherwise noted, all files in this project are licensed under
