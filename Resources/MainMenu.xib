@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="devicesGroupItem" destination="Z3H-KL-v4U" id="zS9-YY-uSZ"/>
+                <outlet property="devicesHeader" destination="CpW-V8-Q7p" id="t31-6V-q7x"/>
+                <outlet property="devicesSeparator" destination="HcR-m0-J8x" id="xhf-NS-ZjW"/>
+                <outlet property="presetsGroupItem" destination="vYV-rL-ruA" id="T6z-mf-ZWh"/>
+                <outlet property="presetsHeader" destination="g4y-Fa-yqz" id="bVQ-85-EK6"/>
+                <outlet property="presetsSeparator" destination="s1k-bo-6Jb" id="7wT-vD-xKZ"/>
+                <outlet property="reloadMenuItem" destination="gX3-ch-vG4" id="68g-Q9-st1"/>
+                <outlet property="revealMenuItem" destination="cW7-Q5-fGG" id="MId-2w-Esh"/>
+                <outlet property="soundSettingsItem" destination="SyC-aL-7GV" id="pfR-d4-aIE"/>
+                <outlet property="statusMenu" destination="Q13-Mn-Ico" id="UCp-ed-jg8"/>
+                <outlet property="volumeMenuItem" destination="pwf-R6-y59" id="ymo-SB-L9Q"/>
+                <outlet property="volumeSlider" destination="RQA-St-s63" id="eMC-B0-bye"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="Q13-Mn-Ico">
+            <items>
+                <menuItem title="&lt;Volume&gt;" id="pwf-R6-y59">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <outlet property="view" destination="7ca-aI-7i4" id="Ibd-sU-3Iu"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="HcR-m0-J8x"/>
+                <menuItem title="Output" id="CpW-V8-Q7p">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="&lt;Devices&gt;" id="Z3H-KL-v4U">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="s1k-bo-6Jb"/>
+                <menuItem title="Presets" id="g4y-Fa-yqz">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="&lt;Presets&gt;" id="vYV-rL-ruA">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="YUy-bF-Edn"/>
+                <menuItem title="Reload Settings" id="gX3-ch-vG4">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="reloadSettings:" target="Voe-Tx-rLC" id="EfH-fW-bEo"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Reveal Settings…" id="cW7-Q5-fGG">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="revealSettings:" target="Voe-Tx-rLC" id="3VJ-wx-5tC"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Sound Settings…" id="SyC-aL-7GV">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showSoundSettings:" target="Voe-Tx-rLC" id="dem-Kp-ILS"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="aUA-xa-YN2"/>
+            </connections>
+            <point key="canvasLocation" x="57" y="147"/>
+        </menu>
+        <customView id="7ca-aI-7i4">
+            <rect key="frame" x="0.0" y="0.0" width="298" height="52"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kUb-mI-uLk">
+                    <rect key="frame" x="12" y="28" width="45" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Sound" id="0Nf-gx-9R9">
+                        <font key="font" metaFont="systemSemibold" size="13"/>
+                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQA-St-s63" customClass="VolumeSlider">
+                    <rect key="frame" x="12" y="3" width="274" height="19"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="below" sliderType="linear" id="Xly-tb-vCw" customClass="VolumeSliderCell"/>
+                    <connections>
+                        <action selector="handleSlider:" target="Voe-Tx-rLC" id="EIk-6G-YXb"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <point key="canvasLocation" x="168" y="282"/>
+        </customView>
+    </objects>
+</document>

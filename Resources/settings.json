@@ -1,0 +1,35 @@
+{
+    "devices": [
+        {
+            "match": { "deviceUID": "BuiltInSpeakerDevice" },
+            "name": "iMac Speakers"
+        },
+
+        {
+            "match": { "deviceUID": "Apogee:Groove" },
+            "name": "Headphones",
+            "symbol": "headphones" 
+        },
+        
+        {
+            "match": { "deviceUID": "miniDSP:miniDSP 2x4HD" },
+            "name": "Main Speakers",
+            "symbol": "hifispeaker.fill",
+            "preset": "main-speakers-optimized"
+        }
+    ],
+    
+    "presets": {
+        "main-speakers-optimized": {
+            "name": "Optimized",
+            "multiplier": 0.5,
+            "biquads": [
+                { "type": "peaking", "frequency": 62.9, "gain": -5.7,  "Q": 10.2 },
+                { "type": "peaking", "frequency": 115,  "gain": 6,     "Q": 4.2  },
+                { "type": "peaking", "frequency": 133,  "gain": -11.4, "Q": 2.4  },
+                { "type": "peaking", "frequency": 264,  "gain": -5.2,  "Q": 1    },
+                { "type": "peaking", "frequency": 688,  "gain": -3.8,  "Q": 5    }
+            ]
+        }
+    }
+}
